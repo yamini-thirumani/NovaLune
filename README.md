@@ -2,6 +2,7 @@ NovaLune
 
 A minimalist journal for sharing thoughts, reflections, and micro-stories.
 
+Demo Link - https://drive.google.com/file/d/1B4fwXOk1r1aU361vasy181MMeTGITqJq/view?usp=sharing
 
 ## Features
 

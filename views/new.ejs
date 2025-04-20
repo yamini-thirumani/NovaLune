@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Thought | NovaLune</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+        <h1>NovaLune - Thought Journal</h1>
+      <p>Capture moments, ideas, and reflections</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="/posts" class="back-link">Back to all thoughts</a>
+    
+    <div class="form-container">
+      <h2 class="form-title">Create a New Thought</h2>
+      
+      <form method="post" action="/posts">
+        <div class="form-group">
+          <label for="username" class="form-label">Your Name</label>
+          <input type="text" id="username" placeholder="Your name or username" name="username" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="content" class="form-label">Your Thought</label>
+          <textarea id="content" placeholder="Share your reflection, idea, or moment..." name="content" class="form-control" required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-paper-plane"></i> Share Thought
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <%= new Date().getFullYear() %> Thought Journal. A place for your meaningful reflections.</p>
+    </div>
+  </footer>
+</body>
+</html>

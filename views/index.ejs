@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaLune - Thought Journal</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>NovaLune - Thought Journal</h1>
+      <p>Capture moments, ideas, and reflections</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <a href="/posts/new" class="new-post-btn">
+      <i class="fas fa-plus"></i> New Thought
+    </a>
+
+    <div class="posts-container">
+      <% for(let post of posts) { %>
+        <div class="post">
+          <h3 class="username">@<%= post.username %></h3>
+          <p class="post-date"><%= post.date %></p>
+          <p class="content"><%= post.content %></p>
+          
+          <div class="post-actions">
+            <a href="/posts/<%= post.id %>" class="btn btn-outline">
+              <i class="fas fa-eye"></i> View
+            </a>
+            <a href="/posts/<%= post.id %>/edit" class="btn btn-outline">
+              <i class="fas fa-edit"></i> Edit
+            </a>
+            <form method="post" action="/posts/<%= post.id %>?_method=DELETE">
+              <button class="btn btn-delete">
+                <i class="fas fa-trash"></i> Delete
+              </button>
+            </form>
+          </div>
+        </div>
+      <% } %>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <%= new Date().getFullYear() %> Thought Journal. A place for your meaningful reflections.</p>
+    </div>
+  </footer>
+</body>
+</html>
